@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Project">
+  <ClassDiagramComponents>
+    <Class name="Add" package="Admin" visibility="public" xPosition="30.0" yPosition="449.0">
+      <Fields>
+        <Field name="r3" type="JRadioButton" visibility="package"/>
+        <Field name="t6" type="JTextField" visibility="package"/>
+        <Field name="l6" type="JLabel" visibility="package"/>
+        <Field name="add" type="JButton" visibility="package" isStatic="true"/>
+        <Field name="g2" type="ButtonGroup" visibility="package"/>
+        <Field name="x" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminFrame" package="Admin" visibility="public" xPosition="30.0" yPosition="77.0">
+      <Fields>
+        <Field name="tab" type="JTabbedPane" visibility="package"/>
+        <Field name="a1" type="Add" visibility="package"/>
+        <Field name="e1" type="Edit" visibility="package"/>
+        <Field name="d1" type="DeleteC" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Show_AdminFrame" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DeleteC" package="Admin" visibility="public" xPosition="503.0" yPosition="11.0">
+      <Fields>
+        <Field name="r7" type="JRadioButton" visibility="package"/>
+        <Field name="remove" type="JButton" visibility="package" isStatic="true"/>
+        <Field name="g4" type="ButtonGroup" visibility="package"/>
+        <Field name="t18" type="JTextField" visibility="package"/>
+        <Field name="l18" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Edit" package="Admin" visibility="public" xPosition="803.0" yPosition="68.0">
+      <Fields>
+        <Field name="r5" type="JRadioButton" visibility="package"/>
+        <Field name="edit" type="JButton" visibility="package" isStatic="true"/>
+        <Field name="g3" type="ButtonGroup" visibility="package"/>
+        <Field name="t11" type="JTextField" visibility="package"/>
+        <Field name="l11" type="JLabel" visibility="package"/>
+        <Field name="x" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Admin_DB" package="Database" visibility="public" xPosition="1151.0" yPosition="21.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Connect" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="insert" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+          <Argument type="String" name="t"/>
+          <Argument type="String" name="d"/>
+          <Argument type="int" name="ti"/>
+          <Argument type="String" name="ca"/>
+        </Method>
+        <Method name="update_Category" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="b"/>
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="update_Events" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="event"/>
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+          <Argument type="String" name="t"/>
+          <Argument type="String" name="d"/>
+          <Argument type="String" name="ca"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Create_DB" package="Database" visibility="public" xPosition="1909.0" yPosition="760.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Connect" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="Insert_Admin" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+        </Method>
+        <Method name="Insert_Employee" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Crew" package="Database" visibility="public" xPosition="1855.0" yPosition="15.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="z" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="Check_category" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="Check_Event" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="b"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Employee_DB" package="Database" visibility="public" xPosition="2236.0" yPosition="11.0">
+      <Fields>
+        <Field name="Ticket" type="int" visibility="public" isStatic="true"/>
+        <Field name="z1" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Connect" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="insert_Client" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="int" name="cl"/>
+        </Method>
+        <Method name="delete_Client" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="cl"/>
+        </Method>
+        <Method name="Check_Client" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="cl"/>
+        </Method>
+        <Method name="Get_Tickets" returnType="int" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="Book" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="se"/>
+          <Argument type="String" name="na"/>
+        </Method>
+        <Method name="UnBook" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="se"/>
+          <Argument type="String" name="na"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SignIn_DB" package="Database" visibility="public" xPosition="1549.0" yPosition="751.0">
+      <Fields>
+        <Field name="y" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Connect" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="Check_Admin" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+        </Method>
+        <Method name="Check_Employee" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddClient" package="Employee" visibility="public" xPosition="30.0" yPosition="732.0">
+      <Fields>
+        <Field name="addC" type="JButton" visibility="package"/>
+        <Field name="t20" type="JTextField" visibility="package"/>
+        <Field name="l20" type="JLabel" visibility="package"/>
+        <Field name="Back1" type="JButton" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployeeFrame" package="Employee" visibility="public" xPosition="73.0" yPosition="995.0">
+      <Fields>
+        <Field name="tab2" type="JTabbedPane" visibility="package"/>
+        <Field name="a2" type="AddClient" visibility="package"/>
+        <Field name="r2" type="RemoveClient" visibility="package"/>
+        <Field name="e1" type="Event" visibility="package"/>
+        <Field name="tc1" type="Tickets" visibility="package"/>
+        <Field name="rt1" type="Retrieve" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Show_EmployeeFrame" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Event" package="Employee" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="done" type="JButton" visibility="package"/>
+        <Field name="t23" type="JTextField" visibility="package"/>
+        <Field name="l23" type="JLabel" visibility="package"/>
+        <Field name="i" type="Image" visibility="package"/>
+        <Field name="Back2" type="JButton" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="showEvent" returnType="void" visibility="public">
+          <Argument type="String" name="b"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RemoveClient" package="Employee" visibility="public" xPosition="780.0" yPosition="751.0">
+      <Fields>
+        <Field name="removeC" type="JButton" visibility="package"/>
+        <Field name="t22" type="JTextField" visibility="package"/>
+        <Field name="l22" type="JLabel" visibility="package"/>
+        <Field name="Back3" type="JButton" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Retrieve" package="Employee" visibility="public" xPosition="1223.0" yPosition="860.0">
+      <Fields>
+        <Field name="r9" type="JRadioButton" visibility="package"/>
+        <Field name="t26" type="JTextField" visibility="package"/>
+        <Field name="l26" type="JLabel" visibility="package"/>
+        <Field name="retrieve" type="JButton" visibility="package"/>
+        <Field name="g5" type="ButtonGroup" visibility="package"/>
+        <Field name="Back4" type="JButton" visibility="package" isStatic="true"/>
+        <Field name="fl" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="showClient" returnType="void" visibility="public">
+          <Argument type="String" name="b"/>
+        </Method>
+        <Method name="showCategory" returnType="void" visibility="public">
+          <Argument type="String" name="b"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tickets" package="Employee" visibility="public" xPosition="1885.0" yPosition="389.0">
+      <Fields>
+        <Field name="book" type="JButton" visibility="package"/>
+        <Field name="t24" type="JTextField" visibility="package"/>
+        <Field name="l24" type="JLabel" visibility="package"/>
+        <Field name="Back5" type="JButton" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreateFrame" package="project" visibility="public" xPosition="2242.0" yPosition="492.0">
+      <Fields>
+        <Field name="i2" type="Image" visibility="package"/>
+        <Field name="b4" type="JButton" visibility="package"/>
+        <Field name="t3" type="JTextField" visibility="package"/>
+        <Field name="t4" type="JPasswordField" visibility="package"/>
+        <Field name="l3" type="JLabel" visibility="package"/>
+        <Field name="r1" type="JRadioButton" visibility="package"/>
+        <Field name="g1" type="ButtonGroup" visibility="package"/>
+        <Field name="a" type="Crew" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="Password" type="String" visibility="package"/>
+        <Field name="id" type="int" visibility="package"/>
+        <Field name="x" type="int" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Show_CreateFrame" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SignInFrame" package="project" visibility="public" xPosition="1428.0" yPosition="255.0">
+      <Fields>
+        <Field name="i1" type="Image" visibility="package"/>
+        <Field name="b1" type="JButton" visibility="package"/>
+        <Field name="t1" type="JTextField" visibility="package"/>
+        <Field name="l1" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Show_SignInFrame" returnType="void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Employee.EmployeeFrame" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Database.Employee_DB" target="Database.Crew"/>
+    <HasRelation name="a1" source="Admin.AdminFrame" target="Admin.Add" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Employee.Tickets" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="d1" source="Admin.AdminFrame" target="Admin.DeleteC" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="project.CreateFrame" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r2" source="Employee.EmployeeFrame" target="Employee.RemoveClient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rt1" source="Employee.EmployeeFrame" target="Employee.Retrieve" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Database.Admin_DB" target="Database.Crew"/>
+    <HasRelation name="a" source="project.CreateFrame" target="Database.Crew" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="a2" source="Employee.EmployeeFrame" target="Employee.AddClient" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Admin.DeleteC" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Admin.Edit" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Employee.RemoveClient" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="e1" source="Admin.AdminFrame" target="Admin.Edit" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Admin.Add" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="project.SignInFrame" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Employee.AddClient" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tc1" source="Employee.EmployeeFrame" target="Employee.Tickets" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="e1" source="Employee.EmployeeFrame" target="Employee.Event" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Employee.Retrieve" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Admin.AdminFrame" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Employee.Event" target="Employee.Event" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
